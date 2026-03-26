@@ -6,7 +6,6 @@
     height: 50px;
     padding-top: 0.1px;
     box-shadow: 5px 3px rgb(165, 165, 165);
-    z-index: 10;
 }
 
 .nav .pt {
@@ -26,7 +25,6 @@
     margin: 0 1px;
     color: black;
     text-transform: uppercase;
-    /* текст в кнопках верхним регистром  */
     font-weight: 700;
 }
 
@@ -53,7 +51,6 @@
     top: 100%;
     /* смещаем относительно верхней стороны на 100 %, т.е. на всю высоту*/
     left: 0%;
-    z-index: 100;
 }
 
 .drop_item {
@@ -169,6 +166,7 @@
     font-weight: bold;
     margin: 15% auto 15% auto;
     width: 100px;
+    text-align: center;
 }
 
 .layer {
@@ -195,6 +193,122 @@
     left: 0px;
 }
 
+.base2 {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-style: solid;
+    border-color: #f8a28b;
+    background: linear-gradient(to right, #ffd9ad, #d9f76e);
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.txt2 {
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    margin: 15% auto 15% auto;
+    width: 100px;
+    text-align: center;
+}
+
+.layer2 {
+    position: absolute;
+    top: 0px;
+    right: -100%;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    background-color: rgba(132, 34, 12, 0.45);
+    transition: right .3s;
+}
+
+.base2:hover .layer2 {
+    right: 0px;
+}
+
+.base3 {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-style: solid;
+    border-color: #2fbbed;
+    background: linear-gradient(to left, #a0a9e8, #1274d749);
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.txt3 {
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    margin: 15% auto 15% auto;
+    text-align: center;
+    width: 100px;
+}
+
+.layer3 {
+    position: absolute;
+    left: 0px;
+    top: -100%;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    background-color: rgba(10, 80, 180, 0.45);
+    transition: top .3s;
+}
+
+.base3:hover .layer3 {
+    top: 0px;
+}
+
+.base4 {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-style: solid;
+    border-color: #f7b0df;
+    background: linear-gradient(to right, #f1c0ec, #fa44d9);
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+}
+
+.txt4 {
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    margin: 15% auto 15% auto;
+    width: 100px;
+    text-align: center;
+}
+
+.layer4 {
+    position: absolute;
+    bottom: -100px;
+    left: 0%;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    background-color: rgba(77, 5, 57, 0.45);
+    transition: bottom .3s;
+}
+
+.base4:hover .layer4 {
+    bottom: 0px;
+}
+
+
 /* Контейнер для блоков */
 .blocks-wrapper {
     overflow: hidden;
@@ -214,7 +328,7 @@
 /* 2 */
 .vertical-menu {
     margin-top: 40px;
-    clear: both;
+
 }
 
 .vertical-menu h2 {
@@ -276,6 +390,92 @@
 .vertical-nav div:hover .v-drop {
     display: block;
 }
+
+/* 2 двойная */
+.d-menu {
+    margin-top: 40px;
+}
+
+.d-menu h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.d-nav {
+    width: 250px;
+    background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+    border-radius: 4px;
+    box-shadow: 5px 3px rgb(165, 165, 165);
+}
+
+
+.d-pt {
+    background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.d-pt:hover {
+    background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
+}
+
+.d-item {
+    position: relative;
+}
+
+.d-drop {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+    border-radius: 4px;
+}
+
+.d-item:hover .d-drop {
+    display: block;
+}
+
+.d-drop_item {
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+    color: black;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.d-drop_item:hover {
+    background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
+}
+
+.d-subitem {
+    position: relative;
+}
+
+.d-subdrop {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 100%;
+    min-width: 150px;
+    background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+    border-radius: 4px;
+}
+
+.d-subitem:hover .d-subdrop {
+    display: block;
+}
+
+
 
 /* 3 */
 .s-menu {
