@@ -6,6 +6,7 @@
     height: 50px;
     padding-top: 0.1px;
     box-shadow: 5px 3px rgb(165, 165, 165);
+    z-index: 10;
 }
 
 .nav .pt {
@@ -52,6 +53,7 @@
     top: 100%;
     /* смещаем относительно верхней стороны на 100 %, т.е. на всю высоту*/
     left: 0%;
+    z-index: 100;
 }
 
 .drop_item {
